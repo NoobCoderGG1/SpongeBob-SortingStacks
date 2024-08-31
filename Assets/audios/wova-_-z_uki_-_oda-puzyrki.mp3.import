@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wova-_-z_uki_-_oda-puzyrki.mp3-8cc8e8d07f7213f28878a4e936b39cfc.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/wova-_-z_uki_-_oda-puzyrki.mp3"
+dest_files=[ "res://.import/wova-_-z_uki_-_oda-puzyrki.mp3-8cc8e8d07f7213f28878a4e936b39cfc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

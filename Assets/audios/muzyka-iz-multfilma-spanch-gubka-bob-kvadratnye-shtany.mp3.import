@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/muzyka-iz-multfilma-spanch-gubka-bob-kvadratnye-shtany.mp3-83cb7373bb08c8b07a016dceb42ddc52.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/muzyka-iz-multfilma-spanch-gubka-bob-kvadratnye-shtany.mp3"
+dest_files=[ "res://.import/muzyka-iz-multfilma-spanch-gubka-bob-kvadratnye-shtany.mp3-83cb7373bb08c8b07a016dceb42ddc52.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

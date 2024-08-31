@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spongebob-production.mp3-24a9e33a09e91ceb0a0be58f2283e49b.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/spongebob-production.mp3"
+dest_files=[ "res://.import/spongebob-production.mp3-24a9e33a09e91ceb0a0be58f2283e49b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

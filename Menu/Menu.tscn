@@ -1,0 +1,154 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Menu/ParallaxBackground/ParallaxBackground.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Backgrounds/menu_background.jpg" type="Texture" id=2]
+[ext_resource path="res://Menu/ParallaxBackground/Title.png" type="Texture" id=3]
+[ext_resource path="res://Menu/ParallaxBackground/Bob.png" type="Texture" id=4]
+[ext_resource path="res://Assets/buttons/btnPng.png" type="Texture" id=5]
+[ext_resource path="res://Menu/ParallaxBackground/TitleRU.png" type="Texture" id=6]
+[ext_resource path="res://Assets/fonts/Angeme-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=8]
+[ext_resource path="res://Assets/buttons/spinBtn.png" type="Texture" id=9]
+[ext_resource path="res://Assets/buttons/greenCubeBtn.png" type="Texture" id=10]
+[ext_resource path="res://Assets/buttons/blueCubeBtn.png" type="Texture" id=11]
+[ext_resource path="res://Assets/audios/muzyka-iz-multfilma-spanch-gubka-bob-kvadratnye-shtany.mp3" type="AudioStream" id=12]
+
+[sub_resource type="DynamicFont" id=3]
+size = 54
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 51
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 51
+font_data = ExtResource( 7 )
+
+[node name="Menu" type="Control"]
+script = ExtResource( 8 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 885.564, 534.163 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 512, 304 )
+scale = Vector2( 0.8, 0.833333 )
+texture = ExtResource( 2 )
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="TitleSpriteENG" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 556, 98.875 )
+scale = Vector2( 0.554248, 0.416815 )
+texture = ExtResource( 3 )
+
+[node name="TitleSpriteRU" type="Sprite" parent="Sprites"]
+position = Vector2( 556, 101.875 )
+scale = Vector2( 0.789986, 0.673571 )
+texture = ExtResource( 6 )
+
+[node name="Bob" type="Sprite" parent="Sprites"]
+position = Vector2( 288, 128 )
+scale = Vector2( 0.242882, 0.263425 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Sprites"]
+margin_left = 392.0
+margin_top = 128.0
+margin_right = 822.0
+margin_bottom = 183.0
+custom_colors/font_color = Color( 1, 0.631373, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Сортировка плиток"
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="playBtn" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 392, 192 )
+scale = Vector2( 0.8, 0.56 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Buttons/playBtn"]
+margin_left = 60.0
+margin_top = 114.286
+margin_right = 267.0
+margin_bottom = 214.286
+custom_colors/font_color = Color( 0.988235, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ИГРАТЬ"
+
+[node name="difficultBtn" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 392, 296 )
+scale = Vector2( 0.773333, 0.586667 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Buttons/difficultBtn"]
+margin_top = 122.727
+margin_right = 332.0
+margin_bottom = 174.727
+custom_colors/font_color = Color( 0.984314, 0.545098, 0.372549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "СЛОЖНОСТЬ"
+
+[node name="rouletteBtn" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 456, 448 )
+scale = Vector2( 0.773333, 0.666667 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Buttons/rouletteBtn"]
+margin_left = 6.10352e-05
+margin_top = 168.0
+margin_right = 161.0
+margin_bottom = 220.0
+custom_colors/font_color = Color( 0.984314, 0.545098, 0.372549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Рулетка"
+
+[node name="shopBtn" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 344, 448 )
+scale = Vector2( 0.755905, 0.644295 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Buttons/shopBtn"]
+margin_left = -84.6667
+margin_top = 161.417
+margin_right = 103.333
+margin_bottom = 213.417
+custom_colors/font_color = Color( 0.741176, 0.984314, 0.372549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Магазин"
+
+[node name="levelBtn" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 600, 448 )
+scale = Vector2( 0.759398, 0.690647 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Buttons/levelBtn"]
+margin_left = 31.6039
+margin_top = 150.583
+margin_right = 192.604
+margin_bottom = 202.583
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Уровни"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+
+[connection signal="pressed" from="Buttons/playBtn" to="." method="playBtn_pressed"]
+[connection signal="pressed" from="Buttons/difficultBtn" to="." method="difficultBtn_pressed"]
+[connection signal="pressed" from="Buttons/rouletteBtn" to="." method="rouletteBtn_pressed"]
+[connection signal="pressed" from="Buttons/shopBtn" to="." method="shopBtn_pressed"]
+[connection signal="pressed" from="Buttons/levelBtn" to="." method="levelBtn_pressed"]
