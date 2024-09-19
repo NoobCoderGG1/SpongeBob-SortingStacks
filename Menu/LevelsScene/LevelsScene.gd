@@ -65,6 +65,7 @@ func _ready():
 	if Bridge.platform.language == "en":
 		$Label2.text = "Buy"
 	for level in Global.levels_available:
+		print(level)
 		if level == "sandyHouse":
 			sandy_lvl = true
 		elif level == "krastyCrab":
@@ -409,7 +410,7 @@ func selectBtn_pressed():
 		if Bridge.platform.language == "en":
 			$Label2.text = "Selected"
 		Global.using_level = "patrickHouse"
-	Bridge.storage.set(["spins","coins","levels_available","using_level"], [Global.available_spins,Global.coins,Global.levels_available,Global.using_level], funcref(self, "_on_storage_set_completed"))
+	Bridge.storage.set(["spins","coins","levels_available","using_level"], [Global.available_spins,Global.coins,str(Global.levels_available),Global.using_level], funcref(self, "_on_storage_set_completed"))
 	$coinText.text = "Монеты: " + str(Global.coins)
 	if Bridge.platform.language == "en":
 		$coinText.text = "Coins: " + str(Global.coins)

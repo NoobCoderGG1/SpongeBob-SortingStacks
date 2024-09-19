@@ -17,4 +17,5 @@ func exitBtn_pressed():
 func restartBtn_pressed():
 	Global.coins += int(35)
 	Bridge.storage.set(["spins","coins"], [Global.available_spins,Global.coins], funcref(self, "_on_storage_set_completed"))
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Level/World.tscn")

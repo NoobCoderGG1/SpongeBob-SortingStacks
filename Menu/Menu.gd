@@ -23,10 +23,35 @@ func _on_storage_get_completed(success, data):
 			print("using level is null")
 			
 		if data[3] != null:
-			Global.using_background = data[3]
+			Global.using_background = str(data[3])
+			print(data[3])
+			print(Global.using_background)
 		else:
 			# Данных по ключу coins нет
 			print("using background is null")
+		
+		if data[4] != null:
+			var string_list = str(data[4])
+			string_list[0] = ""
+			string_list[string_list.length()-1] = ""
+			Global.levels_available = string_list.split(", ")
+			print(str(data[4]))
+			print(Global.levels_available)
+		else:
+			# Данных по ключу coins нет
+			print("using background is null")
+			
+		if data[5] != null:
+			var string_list = str(data[5])
+			string_list[0] = ""
+			string_list[string_list.length()-1] = ""
+			Global.backgrounds_available = string_list.split(", ")
+			print(str(data[5]))
+			print(Global.backgrounds_available)
+		else:
+			# Данных по ключу coins нет
+			print("using background is null")
+			
 func _on_storage_set_completed(success):
 	print("On Storage Set Completed, success: ", success)
 func _notification(what):
@@ -42,7 +67,7 @@ func _on_interstitial_state_changed(state):
 	elif state == "closed" || state == "failed":
 		$AudioStreamPlayer.playing = true
 func _ready():
-	Bridge.storage.get(["spins", "coins","using_level","using_background"], funcref(self, "_on_storage_get_completed"), Bridge.StorageType.LOCAL_STORAGE) 
+	Bridge.storage.get(["spins", "coins","using_level","using_background","levels_available","backgrounds_available"], funcref(self, "_on_storage_get_completed"), Bridge.StorageType.LOCAL_STORAGE) 
 	if Bridge.platform.language == "ru":
 		$Sprites/TitleSpriteENG.visible = false
 		$Sprites/TitleSpriteRU.visible = true
@@ -68,6 +93,7 @@ func _ready():
 	Bridge.advertisement.connect("interstitial_state_changed", self, "_on_interstitial_state_changed")
 	Bridge.advertisement.show_interstitial()
 	print(Global.backgrounds_available) 
+	print(Global.using_background)
 	
 func playBtn_pressed():
 	get_tree().change_scene("res://Level/World.tscn")

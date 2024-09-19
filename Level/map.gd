@@ -71,7 +71,6 @@ func _ready():
 	currentCell_X = mapSize_X / 2
 	currentCell_I = 0
 	startGame = true
-	Bridge.advertisement.show_interstitial() 
 func _process(delta):
 	paint_selectedCell() #Перекраска выбранной ячейки
 	if score >= max_score && !endGame:

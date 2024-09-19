@@ -152,7 +152,7 @@ func _on_stdBackBtn_pressed():
 			$buttons/Label.text = "Using"
 		Global.using_background = "res://Assets/Backgrounds/menu_background.jpg"
 		$background.texture = load("res://Assets/Backgrounds/menu_background.jpg")
-	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,Global.backgrounds_available,Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
+	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,str(Global.backgrounds_available),Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
 func _on_jellyBackBtn_pressed():
 	if !jellyBackground:
 		if Global.coins >= 100:
@@ -169,7 +169,7 @@ func _on_jellyBackBtn_pressed():
 			$buttons/Label2.text = "Using"
 		Global.using_background = "res://Assets/Backgrounds/jellyBackground.png"
 		$background.texture = load("res://Assets/Backgrounds/jellyBackground.png")
-	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,Global.backgrounds_available,Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
+	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,str(Global.backgrounds_available),Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
 	
 func _on_BikinnyBackBtn_pressed():
 	if !bikiniBackground:
@@ -187,7 +187,7 @@ func _on_BikinnyBackBtn_pressed():
 			$buttons/Label3.text = "Using"
 		Global.using_background = "res://Assets/Backgrounds/bikini-bottom_background.jpg"
 		$background.texture = load("res://Assets/Backgrounds/bikini-bottom_background.jpg")
-	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,Global.backgrounds_available,Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
+	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,str(Global.backgrounds_available),Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
 	
 func _on_spongeBackBtn_pressed():
 	if !spongeBackground:
@@ -205,5 +205,5 @@ func _on_spongeBackBtn_pressed():
 			$buttons/Label4.text = "Using"
 		Global.using_background = "res://Assets/Backgrounds/spongebob-house-627x43myjnudtc21.jpg"
 		$background.texture = load("res://Assets/Backgrounds/spongebob-house-627x43myjnudtc21.jpg")
-	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,Global.backgrounds_available,Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
+	Bridge.storage.set(["spins","coins","backgrounds_available","using_background"], [Global.available_spins,Global.coins,str(Global.backgrounds_available),Global.using_background], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
 	print(Global.backgrounds_available) 
