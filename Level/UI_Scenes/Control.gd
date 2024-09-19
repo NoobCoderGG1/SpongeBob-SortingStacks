@@ -11,6 +11,7 @@ func _ready():
 func exitBtn_pressed():
 	Global.coins += int(25)
 	Bridge.storage.set(["spins","coins"], [Global.available_spins,Global.coins], funcref(self, "_on_storage_set_completed"))
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/Menu.tscn")
 
 

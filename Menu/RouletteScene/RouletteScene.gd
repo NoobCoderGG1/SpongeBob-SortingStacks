@@ -83,6 +83,7 @@ func create_tween():
 func exitBtn_pressed():
 	Global.coins = coins
 	Global.available_spins = available_spins
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/Menu.tscn")
 	Bridge.storage.set(["spins","coins"], [Global.available_spins,Global.coins], funcref(self, "_on_storage_set_completed"), Bridge.StorageType.LOCAL_STORAGE)
 func spinBtn_pressed():

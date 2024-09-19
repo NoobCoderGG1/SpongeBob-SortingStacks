@@ -85,6 +85,7 @@ func _ready():
 #	pass
 
 func exitBtn_pressed():
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/Menu.tscn")
 
 

@@ -96,6 +96,7 @@ func _ready():
 	print(Global.using_background)
 	
 func playBtn_pressed():
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Level/World.tscn")
 
 func difficultBtn_pressed():
@@ -111,12 +112,15 @@ func difficultBtn_pressed():
 
 
 func rouletteBtn_pressed():
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/RouletteScene/RouletteScene.tscn")
 
 
 func shopBtn_pressed():
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/ShopScene/Shop.tscn")
 
 
 func levelBtn_pressed():
+	Bridge.advertisement.show_interstitial() 
 	get_tree().change_scene("res://Menu/LevelsScene/LevelsScene.tscn")
